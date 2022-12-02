@@ -50,6 +50,7 @@ var draw_score = 3
 func _ready():
 	$HBoxContainer/OptionButton.add_item("test", 0)
 	$HBoxContainer/OptionButton.add_item("puzzle", 1)
+	$HBoxContainer/OptionButton.add_item("message", 2)
 	
 	$HBoxContainer/OptionButton.connect("item_selected", self, "_process_with_input")
 	
@@ -65,10 +66,6 @@ func _process_with_input(index):
 	for game in input_file.get_as_text().split("\n"):
 		var play = game.split(" ")[0]
 		var answer = game.split(" ")[1]
-		
-		print(play)
-		print(answer)
-		print(rules[answer]["score"])
 		
 		score += (rules[answer]["score"] + round_score(play, answer))
 		score2 += round_score2(play, answer)
