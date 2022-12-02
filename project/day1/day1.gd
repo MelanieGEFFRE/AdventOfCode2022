@@ -7,16 +7,16 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$OptionButton.add_item("test", 0)
-	$OptionButton.add_item("puzzle", 1)
+	$HBoxContainer/OptionButton.add_item("test", 0)
+	$HBoxContainer/OptionButton.add_item("puzzle", 1)
 	
-	$OptionButton.connect("item_selected", self, "_process_with_input")
+	$HBoxContainer/OptionButton.connect("item_selected", self, "_process_with_input")
 	
 	_process_with_input(0)
 	
 func _process_with_input(index):	
 	var input_file = File.new()	
-	input_file.open("res://input/1/"+$OptionButton.get_item_text(index)+".txt", File.READ)
+	input_file.open("res://input/1/"+$HBoxContainer/OptionButton.get_item_text(index)+".txt", File.READ)
 	
 	var maxCal = 0
 	var calList = []
@@ -38,8 +38,8 @@ func _process_with_input(index):
 	
 	calList.sort_custom(MyCustomSort, "sort_descending")
 	
-	$Label.text = str(maxCal)
-	$Label2.text = str(calList[0]+calList[1]+calList[2])
+	$HBoxContainer/puzzle_1.text = str(maxCal)
+	$HBoxContainer/puzzle_2.text = str(calList[0]+calList[1]+calList[2])
 	
 class MyCustomSort:
 	static func sort_descending(a, b): # Par premier élément croissant
