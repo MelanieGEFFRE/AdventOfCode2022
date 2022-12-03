@@ -46,9 +46,3 @@ class MyCustomSort:
 		if a > b:
 			return true
 		return false
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

@@ -66,6 +66,7 @@ var draw_score = 3
 func _ready():
 	$VBoxContainer/HBoxContainer/playAnimation.pressed = play_animation
 	$VBoxContainer/ReferenceRect.visible = play_animation
+	self.rect_min_size = Vector2(0, 50)
 	$VBoxContainer/HBoxContainer/playAnimation.connect("toggled", self, "_show_player")
 	
 	optionMenu.add_item("test", 0)
@@ -127,8 +128,7 @@ func round_score2(play, answer):
 func _show_player(checked):
 	$VBoxContainer/ReferenceRect.visible = checked
 	play_animation = checked
-
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	if checked:
+		self.rect_min_size = Vector2(0, 250)
+	else:
+		self.rect_min_size = Vector2(0, 50)
