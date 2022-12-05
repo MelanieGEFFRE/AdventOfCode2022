@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://day1/day1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://day2/day2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://day3/day3.tscn" type="PackedScene" id=3]
 [ext_resource path="res://day4/day4.tscn" type="PackedScene" id=4]
+[ext_resource path="res://day5/day5.tscn" type="PackedScene" id=5]
 
 [node name="Node" type="Node"]
 
@@ -17,27 +18,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
-margin_bottom = 212.0
+margin_right = 50.0
+margin_bottom = 266.0
 
 [node name="day1" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_right = 50.0
 margin_bottom = 50.0
 
 [node name="day2" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 54.0
+margin_right = 50.0
 margin_bottom = 104.0
 
 [node name="day3" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 108.0
+margin_right = 50.0
 margin_bottom = 158.0
 
 [node name="day4" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 162.0
+margin_right = 50.0
 margin_bottom = 212.0
+
+[node name="day5" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 216.0
+margin_right = 50.0
+margin_bottom = 266.0
