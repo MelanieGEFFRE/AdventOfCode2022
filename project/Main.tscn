@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://day1/day1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://day2/day2.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://day5/day5.tscn" type="PackedScene" id=5]
 [ext_resource path="res://day6/day6.tscn" type="PackedScene" id=6]
 [ext_resource path="res://day7/day7.tscn" type="PackedScene" id=7]
+[ext_resource path="res://day8/day8.tscn" type="PackedScene" id=8]
 
 [node name="Node" type="Node"]
 
@@ -21,7 +22,7 @@ anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 50.0
-margin_bottom = 374.0
+margin_bottom = 428.0
 
 [node name="day1" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
@@ -70,3 +71,10 @@ anchor_bottom = 0.0
 margin_top = 324.0
 margin_right = 50.0
 margin_bottom = 374.0
+
+[node name="day8" parent="ScrollContainer/VBoxContainer" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 378.0
+margin_right = 50.0
+margin_bottom = 428.0
