@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://day9/assets/perso.png" type="Texture" id=1]
+
+[node name="Perso" type="Sprite"]
+scale = Vector2( 0.002, 0.002 )
+texture = ExtResource( 1 )

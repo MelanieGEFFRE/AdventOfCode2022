@@ -108,8 +108,6 @@ func _process_with_input(index):
 			_get_direction_scenic_score(value, topTrees) * \
 			_get_direction_scenic_score(value, bottomTrees)
 			
-			print(treeCoordX, " ", treeCoordY, " ", _get_direction_scenic_score(value, rightTrees), " ",_get_direction_scenic_score(value, leftTrees), " ", \
-			_get_direction_scenic_score(value, topTrees), " ", _get_direction_scenic_score(value, bottomTrees))
 			if highestScenicScore == -1 || totalScenicScore > highestScenicScore:
 				highestScenicScore = totalScenicScore
 		treeCoordY += 1
